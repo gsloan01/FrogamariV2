@@ -22,8 +22,11 @@ public class Mouth : SingletonComponent<Mouth>
 
         if (timer >= 5)
         {
-            CreateTongue();
-            timer = 0;
+            if (target != null)
+            {
+                CreateTongue();
+                timer = 0;
+            }
         }
     }
 
