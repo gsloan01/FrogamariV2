@@ -13,10 +13,10 @@ public class Consumable : MonoBehaviour
     void Start()
     {
         interactable = GetComponent<Interactable>();
-        interactable.onInteractedCallback += Eat;
+        interactable.onInteractedCallback += FollowTongue;
     }
 
-    void Eat()
+    void FollowTongue()
     {
 
     }
