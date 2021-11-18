@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LickUI : MonoBehaviour
 {
@@ -31,6 +32,12 @@ public class LickUI : MonoBehaviour
     public void Close()
     {
         gameObject.SetActive(false);
+    }
+
+    public void OnClick()
+    {
+        Mouth.Instance.target = consumable;
+        Mouth.Instance.CreateTongue();
     }
 
     private void Update()
