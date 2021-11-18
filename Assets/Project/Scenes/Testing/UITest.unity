@@ -135,6 +135,8 @@ GameObject:
   - component: {fileID: 29523353}
   - component: {fileID: 29523352}
   - component: {fileID: 29523351}
+  - component: {fileID: 29523356}
+  - component: {fileID: 29523355}
   m_Layer: 0
   m_Name: ConsumableStandIn
   m_TagString: Untagged
@@ -218,6 +220,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &29523355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 29523350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4fb70cc614b3e94f9ee94654e77e6dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mass: 0
+  massGainRatio: 0
+--- !u!114 &29523356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 29523350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 112dfb957c619eb4b900651b0aa083a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &429798836
 GameObject:
   m_ObjectHideFlags: 0
@@ -800,7 +828,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lickUIs: []
   LickUICanvas: {fileID: 1141553618}
-  test: {fileID: 29523350}
+  test: {fileID: 0}
   prefab: {fileID: 4445186286210401559, guid: f5061a1390ae025498ca948c0db5c730, type: 3}
 --- !u!4 &1845693719
 Transform:

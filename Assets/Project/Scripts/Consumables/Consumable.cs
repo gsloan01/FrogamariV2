@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Interactable))]
+[RequireComponent(typeof(Collider))]
 public class Consumable : MonoBehaviour
 {
     Interactable interactable;
@@ -20,4 +21,26 @@ public class Consumable : MonoBehaviour
     {
 
     }
+
+    //private void OnTriggerStay(Collider other)
+    //{
+    //    if (other.CompareTag("Player"))
+    //    {
+    //        if (LickUIManager.Instance.TryGetLickUI(interactable, out LickUI found))
+    //        {
+    //            found.Open();
+    //        }
+    //    }
+    //}
+
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    if (other.CompareTag("Player"))
+    //    {
+    //        if (LickUIManager.Instance.TryGetLickUI(interactable, out LickUI found))
+    //        {
+    //            found.Close();
+    //        }
+    //    }
+    //}
 }
