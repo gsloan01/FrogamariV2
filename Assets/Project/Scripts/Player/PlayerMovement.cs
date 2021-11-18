@@ -6,12 +6,14 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent))]
 public class PlayerMovement : MonoBehaviour
 {
+    private Animator animator;
     private NavMeshAgent meshAgent;
     [SerializeField]
     private float jumpDistance = 2;
 
     private void Awake()
     {
+        animator = GetComponentInChildren<Animator>();
         meshAgent = GetComponent<NavMeshAgent>();
     }
 
@@ -34,7 +36,8 @@ public class PlayerMovement : MonoBehaviour
         position += new Vector3(swipeDir.x, 0, swipeDir.y) * jumpDistance;
 
         meshAgent.SetDestination(position);
-    }
 
-    
+        //Change Later to Look Better (Anim Events)
+        animator.SetTrigger("Jump");
+    }
 }
