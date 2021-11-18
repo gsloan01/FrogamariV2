@@ -10,7 +10,7 @@ public class LickUIManager : SingletonComponent<LickUIManager>
 {
     public List<LickUI> lickUIs = new List<LickUI>();
     [SerializeField] Canvas LickUICanvas;
-    [SerializeField] GameObject test;
+    [SerializeField] Interactable test;
     [SerializeField] LickUI prefab;
     bool toggleTest = true;
 
@@ -18,7 +18,7 @@ public class LickUIManager : SingletonComponent<LickUIManager>
     /// This method will be called by the consumable to display a lick ui when it is in range and the player is the correct size.
     /// </summary>
     /// <param name="thisObject">Object to display UI for</param>
-    public void DisplayLickUI(GameObject thisObject)
+    public void DisplayLickUI(Interactable thisObject)
     {
         //Get every lickUI where that consumable is used.
         IEnumerable<LickUI> foundLickUIs = lickUIs.Where(x => x.consumable == thisObject);
@@ -47,7 +47,7 @@ public class LickUIManager : SingletonComponent<LickUIManager>
     /// This method will be called by the consumable to close a lick ui when the range is too far or the player isn't the correct size.
     /// </summary>
     /// <param name="thisObject">Object to remove UI for</param>
-    public void CloseLickUI(GameObject thisObject)
+    public void CloseLickUI(Interactable thisObject)
     {
         //Find the gameObjects ui and close it
         lickUIs.Where(x => x.consumable == thisObject).First().Close();
@@ -57,6 +57,13 @@ public class LickUIManager : SingletonComponent<LickUIManager>
     {
         lickUIs.ForEach(x => Destroy(x));
         lickUIs.Clear();
+    }
+
+    public bool TryGetLickUI(Interactable interactable, out LickUI found)
+    {
+        bool exists = false;
+        found = null;
+        return exists;
     }
 
     public void OnClick()
