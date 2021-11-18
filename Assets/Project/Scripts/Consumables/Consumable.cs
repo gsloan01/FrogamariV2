@@ -7,8 +7,8 @@ public class Consumable : MonoBehaviour
 {
     Interactable interactable;
 
-    public float mass;
-    [Range(0, 2)]public float massGainRatio;
+    public float mass = 1;
+    [Range(0, 2)]public float massGainRatio = 0.75f;
 
     void Start()
     {
@@ -18,6 +18,6 @@ public class Consumable : MonoBehaviour
 
     void FollowTongue()
     {
-
+        transform.SetParent(Mouth.Instance.tongueObject.transform, true);
     }
 }
