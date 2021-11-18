@@ -18,20 +18,38 @@ public class Mouth : SingletonComponent<Mouth>
 
     void Update()
     {
-        timer += Time.deltaTime;
+        #region Timer testing
 
-        if (timer >= 5)
-        {
-            if (target != null)
-            {
-                CreateTongue();
-                timer = 0;
-            }
-        }
+        //timer += Time.deltaTime;
+
+        //if (timer >= 5)
+        //{
+        //    if (target != null)
+        //    {
+        //        CreateTongue();
+        //        timer = 0;
+        //    }
+        //}
+        #endregion
     }
 
     public void CreateTongue()
     {
         tongueObject = Instantiate(tongue.gameObject, transform);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.TryGetComponent<Interactable>(out Interactable interactable))
+        {
+            LickUIManager.Instance.DisplayLickUI(interactable);
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.TryGetComponent<Interactable>(out Interactable interactable))
+        {
+            LickUIManager.Instance.CloseLickUI(interactable);
+        }
     }
 }
