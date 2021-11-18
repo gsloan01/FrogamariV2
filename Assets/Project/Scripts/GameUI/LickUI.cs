@@ -7,7 +7,7 @@ public class LickUI : MonoBehaviour
     /// <summary>
     /// The consumable this UI represents.
     /// </summary>
-    public GameObject consumable;
+    public Interactable consumable;
 
     /// <summary>
     /// Player camera. Will need to know where the consumable is on the screen.
