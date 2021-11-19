@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/Data/Controls/PlayerControls.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/External/AudioMixerAndMenu/Data/Controls/PlayerControls.inputactions'
 
 using System;
 using System.Collections;

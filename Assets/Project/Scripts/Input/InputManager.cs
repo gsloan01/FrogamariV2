@@ -11,6 +11,7 @@ public class InputManager : SingletonComponent<InputManager>
 
     public delegate void TouchDelegate(TouchState touch);
     public delegate void SwipeDelegate(Swipe swipe);
+    public delegate void Vector2Delegate(Vector2 vector);
 
     /// <summary>Event for the beginning of a touch</summary>
     public event TouchDelegate onTouchStart;
@@ -18,6 +19,10 @@ public class InputManager : SingletonComponent<InputManager>
     public event TouchDelegate onTouchUpdate;
     /// <summary>Event after a touch</summary>
     public event TouchDelegate onTouchEnd;
+
+    /// <summary> Event for dragging </summmary>
+    public event Vector2Delegate onDrag;
+    private Vector2 lastScreenPos;
 
     /// <summary>Event after a swipe</summary>
     public event SwipeDelegate onSwipe;
@@ -34,6 +39,7 @@ public class InputManager : SingletonComponent<InputManager>
 
         //Instantiate all controls
         playerControls.TouchScreen.PrimaryTouch.performed += TouchUpdate;
+        
 
 
         onTouchEnd += OnSwipe;
@@ -45,10 +51,12 @@ public class InputManager : SingletonComponent<InputManager>
     private void TouchUpdate(InputAction.CallbackContext obj)
     {
         TouchState value = obj.ReadValue<TouchState>();
+        
 
         if (value.phase == UnityEngine.InputSystem.TouchPhase.Began) TouchStart(obj);
 
         onTouchUpdate?.Invoke(value);
+        OnDrag(value.position - lastScreenPos);
 
         if (value.phase == UnityEngine.InputSystem.TouchPhase.Ended) TouchEnd(obj);
     }
@@ -61,6 +69,8 @@ public class InputManager : SingletonComponent<InputManager>
         TouchState value = obj.ReadValue<TouchState>();
         currentSwipe.startPosition = value.position;
         onTouchStart?.Invoke(value);
+
+        lastScreenPos = value.position;
     }
 
     private void TouchEnd(InputAction.CallbackContext obj)
@@ -68,6 +78,7 @@ public class InputManager : SingletonComponent<InputManager>
         //Debug.Log("End Touch");
         TouchState value = obj.ReadValue<TouchState>();
         onTouchEnd?.Invoke(value);
+        lastScreenPos = new Vector2();
     }
     #endregion
 
@@ -84,6 +95,14 @@ public class InputManager : SingletonComponent<InputManager>
             Debug.Log(currentSwipe);
             onSwipe?.Invoke(currentSwipe);
         }
+    }
+    #endregion
+
+    #region Dragging
+    private void OnDrag(Vector2 delta)
+    {
+        onDrag?.Invoke(delta);
+        lastScreenPos += delta;
     }
     #endregion
 

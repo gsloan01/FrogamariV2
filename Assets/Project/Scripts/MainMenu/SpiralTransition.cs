@@ -12,6 +12,9 @@ public class SpiralTransition : SingletonComponent<SpiralTransition>
 
 
     public UnityEvent OnTransitionFinishedOpening;
+    public UnityEvent OnTransitionFinishedClosing;
+    public UnityEvent OnTransitionStartedOpening;
+    public UnityEvent OnTransitionStartedClosing;
 
     public void Open()
     {
@@ -24,6 +27,7 @@ public class SpiralTransition : SingletonComponent<SpiralTransition>
 
     IEnumerator OpenTransition()
     {
+        OnTransitionStartedOpening?.Invoke();
         for (int i = 0; i < sections.Count; i++)
         {
             StartCoroutine(StartSection(sections[i], true));
@@ -65,6 +69,7 @@ public class SpiralTransition : SingletonComponent<SpiralTransition>
 
     IEnumerator CloseTransition()
     {
+        OnTransitionStartedClosing?.Invoke();
         tips.SetActive(false);
         //reset all
         for (int i = sections.Count-1; i >= 0; i--)
@@ -73,6 +78,7 @@ public class SpiralTransition : SingletonComponent<SpiralTransition>
             StartCoroutine(StartSection(sections[i], false));
             yield return new WaitForSeconds(delayBetweenSlides);
         }
+        OnTransitionFinishedClosing?.Invoke();
         yield return null;
     }
 }
