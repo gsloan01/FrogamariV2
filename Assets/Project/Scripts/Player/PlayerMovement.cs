@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : SingletonComponent<PlayerMovement>
 {
     private Animator animator;
     private NavMeshAgent meshAgent;
@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
+        base.Awake();
+
         animator = GetComponentInChildren<Animator>();
         meshAgent = GetComponent<NavMeshAgent>();
     }
