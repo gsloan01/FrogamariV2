@@ -7,7 +7,6 @@ public class RotatePlanet : MonoBehaviour
     [SerializeField]
     private float rotationSpeed = .1f;
 
-
     private void Awake()
     {
         InputManager.Instance.onSwipe += ControlPlanetRotation;
