@@ -26,7 +26,7 @@ public class PlayerMovement : SingletonComponent<PlayerMovement>
 
     private void OnDisable()
     {
-        InputManager.Instance.onSwipe -= OnSwipe;
+        if (InputManager.InstanceExists) InputManager.Instance.onSwipe -= OnSwipe;
     }
 
 
