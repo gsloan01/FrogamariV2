@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class RotatePlanet : MonoBehaviour
 {
-    private Touch touch;
-    private Vector2 touchPosition;
-    private Quaternion rotation;
-
     [SerializeField]
     private float rotationSpeed = .1f;
 
