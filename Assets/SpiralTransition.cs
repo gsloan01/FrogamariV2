@@ -23,27 +23,29 @@ public class SpiralTransition : SingletonComponent<SpiralTransition>
 
     IEnumerator OpenTransition()
     {
-        //reset all
         for (int i = 0; i < sections.Count; i++)
         {
-            StartSection(sections[i], true);
+            StartCoroutine(StartSection(sections[i], true));
             yield return new WaitForSeconds(delayBetweenSlides);
         }
+        yield return new WaitForSeconds(1/fillSpeed);
 
         tips.SetActive(true);
-        OnTransitionFinishedOpening.Invoke();
+        OnTransitionFinishedOpening?.Invoke();
+
         yield return null;
     }
 
-    IEnumerator StartSection(Image section, bool open)
+    IEnumerator StartSection(Image section, bool opening)
     {
-        if(open)
+        if(opening)
         {
             section.fillClockwise = true;
             section.gameObject.SetActive(true);
-            while(section.fillAmount != 1)
+            while(section.fillAmount < 1)
             {
                 section.fillAmount += Time.deltaTime * fillSpeed;
+                yield return null;
             }
         }
         else // close
@@ -52,6 +54,7 @@ public class SpiralTransition : SingletonComponent<SpiralTransition>
             while (section.fillAmount != 0)
             {
                 section.fillAmount -= Time.deltaTime * fillSpeed;
+                yield return null;
             }
             section.gameObject.SetActive(false);
         }
@@ -63,10 +66,10 @@ public class SpiralTransition : SingletonComponent<SpiralTransition>
     {
         tips.SetActive(false);
         //reset all
-        for (int i = 0; i < sections.Count; i++)
+        for (int i = sections.Count-1; i >= 0; i--)
         {
 
-            StartSection(sections[i], true);
+            StartCoroutine(StartSection(sections[i], false));
             yield return new WaitForSeconds(delayBetweenSlides);
         }
         yield return null;
