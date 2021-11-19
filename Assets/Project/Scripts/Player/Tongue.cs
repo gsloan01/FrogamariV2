@@ -10,11 +10,6 @@ public class Tongue : MonoBehaviour
 
     bool hitTarget = false;
 
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         Vector3 targetPosition = Vector3.zero;
