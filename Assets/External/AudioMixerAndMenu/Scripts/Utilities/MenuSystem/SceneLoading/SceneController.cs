@@ -19,6 +19,8 @@ public class SceneController : MonoBehaviour
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
+    #region LoadSceneWithName
+
     public void OnLoadScene(string sceneName)
     {
         StartCoroutine(LoadScene(sceneName));
@@ -32,9 +34,28 @@ public class SceneController : MonoBehaviour
         yield return null;
     }
 
+    #endregion
+
+    #region LoadSceneWithIndex
+
+    public void OnLoadScene(int index)
+    {
+        StartCoroutine(LoadScene(index));
+    }
+
+    IEnumerator LoadScene(int index)
+    {
+        preloadSceneEvent?.Invoke();
+        SceneManager.LoadScene(index);
+
+        yield return null;
+    }
+
+    #endregion
+
     public void OnReloadCurrentScene()
     {
-        OnLoadScene(SceneManager.GetActiveScene().name);
+        OnLoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
