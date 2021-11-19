@@ -5,6 +5,7 @@ using UnityEngine;
 public class Tongue : MonoBehaviour
 {
     public float speed = 1;
+    public float mouthRange = 0.5f;
     public bool lerpMovement = false;
 
     bool hitTarget = false;
@@ -29,9 +30,12 @@ public class Tongue : MonoBehaviour
 
         transform.position = movement;
 
-        //Destroy when back at the mouth
-        if (hitTarget && transform.position == Mouth.Instance.transform.position)
+        //Check range to mouth
+        bool withinRange = Vector3.Distance(transform.position, Mouth.Instance.transform.position) <= mouthRange;
+        if (hitTarget && withinRange)
         {
+            //Destroy when back at the mouth
+            Mouth.Instance.TurnOffLineRenderer();
             Destroy(gameObject);
         }
     }
