@@ -9,7 +9,6 @@ public class RotatePlanet : MonoBehaviour
 
 
 
-
     private void Awake()
     {
         InputManager.Instance.onSwipe += ControlPlanetRotation;
