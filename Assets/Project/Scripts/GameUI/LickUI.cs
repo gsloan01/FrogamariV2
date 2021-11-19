@@ -44,7 +44,12 @@ public class LickUI : MonoBehaviour
     {
         if(gameObject.activeSelf && !closing)
         {
-            transform.position = playerCamera.WorldToScreenPoint(consumable.transform.position);
+            if (consumable == null) Close();
+            else
+            {
+                transform.position = playerCamera.WorldToScreenPoint(consumable.transform.position);
+
+            }
         }
     }
 }
