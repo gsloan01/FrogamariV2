@@ -11,7 +11,7 @@ public class RotatePlanet : MonoBehaviour
 
     private void Awake()
     {
-        InputManager.Instance.onSwipe += ControlPlanetRotation;
+        InputManager.Instance.onDrag += ControlPlanetRotation;
         target = transform.rotation.eulerAngles;
     }
 
@@ -25,13 +25,12 @@ public class RotatePlanet : MonoBehaviour
         //}
     }
 
-    void ControlPlanetRotation(Swipe swipe)
+    void ControlPlanetRotation(Vector2 vector)
     {        
         //Debug.Log(swipe.SwipeDirection.x + ", " + swipe.SwipeDirection.y);
         ////Normalized Vector2 (-1 to 1)
-        Vector2 swipeDir = swipe.SwipeDirection;
 
-        transform.RotateAroundLocal(new Vector3(-swipeDir.y * rotationSpeed, swipeDir.x * rotationSpeed, 0), 20);
+        transform.RotateAroundLocal(new Vector3(vector.y * rotationSpeed * Time.deltaTime, -vector.x * rotationSpeed * Time.deltaTime, 0), maxAngle);
         //target = new Vector3(-swipeDir.y * rotationSpeed, swipeDir.x * rotationSpeed, 0);
     }
 }
