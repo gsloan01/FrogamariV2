@@ -34,4 +34,9 @@ public class Select : MonoBehaviour
             Debug.Log("Entered");
         }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        popUpImage.gameObject.SetActive(false);
+    }
 }
