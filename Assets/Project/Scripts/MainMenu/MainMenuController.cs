@@ -6,6 +6,8 @@ public class MainMenuController : MonoBehaviour
 {
     [SerializeField] Camera main;
 
+    [SerializeField] AudioSource SwooshFX;
+
     [SerializeField]Canvas Title;
     [SerializeField]Canvas MainMenu;
     [SerializeField]Canvas Customize;
@@ -52,6 +54,7 @@ public class MainMenuController : MonoBehaviour
         Customize.gameObject.SetActive(true);
         target = customizeBG;
         targetAngle = customizationAngle;
+        SwooshFX?.Play();
     }
 
     public void OnOpenMainMenu()
@@ -61,6 +64,7 @@ public class MainMenuController : MonoBehaviour
         MainMenu.gameObject.SetActive(true);
         target = mainMenuBG;
         targetAngle = mainMenuAngle;
+        SwooshFX?.Play();
     }
     public void OnOpenShop()
     {
@@ -68,6 +72,7 @@ public class MainMenuController : MonoBehaviour
         Shop.gameObject.SetActive(true);
         target = shopBG;
         targetAngle = shopAngle;
+        SwooshFX?.Play();
     }
 
     public void CloseAll()

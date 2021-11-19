@@ -17,7 +17,7 @@ public class SceneController : MonoBehaviour
 
     void OnDisable()
     {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
+        //SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     #region LoadSceneWithName
@@ -31,7 +31,7 @@ public class SceneController : MonoBehaviour
     {
         preloadSceneEvent?.Invoke();
 
-        new WaitForSeconds(minimumLoadTime);
+        yield return new WaitForSeconds(minimumLoadTime);
 
         SceneManager.LoadScene(sceneName);
 
@@ -51,9 +51,10 @@ public class SceneController : MonoBehaviour
     {
         preloadSceneEvent?.Invoke();
 
-        new WaitForSeconds(minimumLoadTime);
+        yield return new WaitForSeconds(minimumLoadTime);
 
         SceneManager.LoadScene(index);
+
 
         yield return null;
     }
