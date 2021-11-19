@@ -5,26 +5,31 @@ using UnityEngine;
 public class RotatePlanet : MonoBehaviour
 {
     [SerializeField]
-    private float rotationSpeed = .1f;
+    private float rotationSpeed, maxAngle = .1f;
+
+
 
     private void Awake()
     {
         InputManager.Instance.onSwipe += ControlPlanetRotation;
+        
     }
 
     void Update()
     {
         
+        //lerp deez nuts
     }
 
     void ControlPlanetRotation(Swipe swipe)
     {
-        Quaternion rotation = transform.rotation;
+        Quaternion target;
+        
+        //Debug.Log(swipe.SwipeDirection.x + ", " + swipe.SwipeDirection.y);
+        ////Normalized Vector2 (-1 to 1)
         Vector2 swipeDir = swipe.SwipeDirection;
 
-        //rotation *= Quaternion.Euler(swipeDir.x * rotationSpeed, swipeDir.y * rotationSpeed, 0f);
-        rotation = Quaternion.Euler(swipeDir.x * rotationSpeed, swipeDir.y * rotationSpeed, 0f);
+        transform.RotateAroundLocal(new Vector3(-swipeDir.y * rotationSpeed, swipeDir.x * rotationSpeed, 0), 20);
 
-        transform.rotation *= rotation;
     }
 }
