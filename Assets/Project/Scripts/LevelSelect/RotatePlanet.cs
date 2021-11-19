@@ -27,8 +27,8 @@ public class RotatePlanet : MonoBehaviour
         Quaternion rotation = transform.rotation;
         Vector2 swipeDir = swipe.SwipeDirection;
 
-        //rotation *= Quaternion.Euler(swipeDir.x * rotationSpeed, swipeDir.y * rotationSpeed, 0f);
-        rotation = Quaternion.Euler(swipeDir.x * rotationSpeed, swipeDir.y * rotationSpeed, 0f);
+        rotation *= Quaternion.Euler(swipeDir.x * rotationSpeed, swipeDir.y * rotationSpeed, 0f);
+        //rotation = Quaternion.Euler(swipeDir.x * rotationSpeed, swipeDir.y * rotationSpeed, 0f);
 
         transform.rotation *= rotation;
     }
