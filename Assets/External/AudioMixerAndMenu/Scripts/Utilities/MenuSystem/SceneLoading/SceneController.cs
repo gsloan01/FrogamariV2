@@ -8,6 +8,7 @@ public class SceneController : MonoBehaviour
 {
     public UnityEvent preloadSceneEvent;
     public UnityEvent postloadSceneEvent;
+    public float minimumLoadTime = 1f;
 
     void OnEnable()
     {
@@ -29,6 +30,9 @@ public class SceneController : MonoBehaviour
     IEnumerator LoadScene(string sceneName)
     {
         preloadSceneEvent?.Invoke();
+
+        new WaitForSeconds(minimumLoadTime);
+
         SceneManager.LoadScene(sceneName);
 
         yield return null;
@@ -46,6 +50,9 @@ public class SceneController : MonoBehaviour
     IEnumerator LoadScene(int index)
     {
         preloadSceneEvent?.Invoke();
+
+        new WaitForSeconds(minimumLoadTime);
+
         SceneManager.LoadScene(index);
 
         yield return null;
