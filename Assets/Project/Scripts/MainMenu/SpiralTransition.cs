@@ -8,7 +8,8 @@ public class SpiralTransition : SingletonComponent<SpiralTransition>
 {
     [SerializeField] private List<Image> sections;
     [SerializeField] private float delayBetweenSlides, fillSpeed;
-    [SerializeField] GameObject tips;
+    [SerializeField] private GameObject tips;
+
 
     public UnityEvent OnTransitionFinishedOpening;
 
