@@ -39,8 +39,6 @@ public class InputManager : SingletonComponent<InputManager>
 
         //Instantiate all controls
         playerControls.TouchScreen.PrimaryTouch.performed += TouchUpdate;
-        
-
 
         onTouchEnd += OnSwipe;
     }
