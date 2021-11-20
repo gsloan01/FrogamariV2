@@ -26,7 +26,7 @@ public class RotatePlanet : MonoBehaviour
     }
 
     void ControlPlanetRotation(Vector2 vector)
-    {        
+    {
         //Debug.Log(swipe.SwipeDirection.x + ", " + swipe.SwipeDirection.y);
         ////Normalized Vector2 (-1 to 1)
 
