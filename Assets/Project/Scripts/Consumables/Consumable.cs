@@ -26,7 +26,7 @@ public class Consumable : MonoBehaviour
 
     void FollowTongue()
     {
-        if (MassManager.Instance.currentMass >= mass * minGrabMultiplier)
+        if (MassManager.Instance.CurrentMass >= mass * minGrabMultiplier)
         {
             transform.SetParent(Mouth.Instance.tongueObject.transform, true);
         }
@@ -34,7 +34,7 @@ public class Consumable : MonoBehaviour
 
     public void TryEat()
     {
-        if (MassManager.Instance.currentMass >= mass * minGrabMultiplier)
+        if (MassManager.Instance.CurrentMass >= mass * minGrabMultiplier)
         {
             MassManager.Instance.GainMass(mass * massGainRatio);
             OtherEffects();
@@ -44,6 +44,11 @@ public class Consumable : MonoBehaviour
     public virtual void OtherEffects()
     {
         Debug.Log("Other Consumable Effects");
+    }
+
+    private void OnDestroy()
+    {
+        TryEat();
     }
 
     //private void OnTriggerStay(Collider other)
