@@ -5,7 +5,7 @@ using UnityEngine;
 public class RotatePlanet : MonoBehaviour
 {
     [SerializeField]
-    private float rotationSpeed, maxAngle = .1f;
+    private float rotationSpeed = 30f;
 
     Vector3 target = Vector3.zero;
 
@@ -26,11 +26,11 @@ public class RotatePlanet : MonoBehaviour
     }
 
     void ControlPlanetRotation(Vector2 vector)
-    {        
+    {
         //Debug.Log(swipe.SwipeDirection.x + ", " + swipe.SwipeDirection.y);
         ////Normalized Vector2 (-1 to 1)
 
-        transform.RotateAroundLocal(new Vector3(vector.y * rotationSpeed * Time.deltaTime, -vector.x * rotationSpeed * Time.deltaTime, 0), maxAngle);
+        transform.Rotate(new Vector3(vector.y, -vector.x, 0), vector.magnitude * rotationSpeed * Time.deltaTime, Space.World);
         //target = new Vector3(-swipeDir.y * rotationSpeed, swipeDir.x * rotationSpeed, 0);
     }
 }

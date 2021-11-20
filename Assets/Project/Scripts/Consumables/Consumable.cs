@@ -4,12 +4,19 @@ using UnityEngine;
 
 [RequireComponent(typeof(Interactable))]
 [RequireComponent(typeof(Collider))]
+[RequireComponent(typeof(Rigidbody))]
 public class Consumable : MonoBehaviour
 {
-    Interactable interactable;
+    public delegate void OnStuck();
+    public OnStuck OnStuckCallback;
+
 
     public float mass = 1;
     [Range(0, 2)]public float massGainRatio = 0.75f;
+    [Range(0, 2)] public float minGrabMultiplier = 0.75f;
+    [Range(0, 5)] public float minEatMultiplier = 0.75f;
+
+    Interactable interactable;
 
     void Start()
     {
@@ -19,7 +26,24 @@ public class Consumable : MonoBehaviour
 
     void FollowTongue()
     {
-        transform.SetParent(Mouth.Instance.tongueObject.transform, true);
+        if (MassManager.Instance.currentMass >= mass * minGrabMultiplier)
+        {
+            transform.SetParent(Mouth.Instance.tongueObject.transform, true);
+        }
+    }
+
+    public void TryEat()
+    {
+        if (MassManager.Instance.currentMass >= mass * minGrabMultiplier)
+        {
+            MassManager.Instance.GainMass(mass * massGainRatio);
+            OtherEffects();
+        }
+    }
+
+    public virtual void OtherEffects()
+    {
+        Debug.Log("Other Consumable Effects");
     }
 
     //private void OnTriggerStay(Collider other)
