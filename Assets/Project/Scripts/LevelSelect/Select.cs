@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Select : MonoBehaviour
 {
-    public Image popUpImage;
+    public GameObject selectLevelUpCanvas;
 
     void Start()
     {
@@ -29,14 +29,14 @@ public class Select : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            popUpImage.gameObject.SetActive(true);
+            selectLevelUpCanvas.SetActive(true);
 
-            Debug.Log("Entered");
+            //Debug.Log("Entered");
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        popUpImage.gameObject.SetActive(false);
+        selectLevelUpCanvas.SetActive(false);
     }
 }
