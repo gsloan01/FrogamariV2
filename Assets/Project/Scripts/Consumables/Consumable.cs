@@ -4,6 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Interactable))]
 [RequireComponent(typeof(Collider))]
+[RequireComponent(typeof(Rigidbody))]
 public class Consumable : MonoBehaviour
 {
     public delegate void OnStuck();
