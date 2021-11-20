@@ -54,7 +54,7 @@ public class InputManager : SingletonComponent<InputManager>
         if (value.phase == UnityEngine.InputSystem.TouchPhase.Began) TouchStart(obj);
 
         onTouchUpdate?.Invoke(value);
-        OnDrag(value.position - lastScreenPos);
+        OnDrag((lastScreenPos == new Vector2(-1,-1)) ? new Vector2(0,0) : value.position - lastScreenPos);
 
         if (value.phase == UnityEngine.InputSystem.TouchPhase.Ended) TouchEnd(obj);
     }
@@ -76,7 +76,7 @@ public class InputManager : SingletonComponent<InputManager>
         //Debug.Log("End Touch");
         TouchState value = obj.ReadValue<TouchState>();
         onTouchEnd?.Invoke(value);
-        lastScreenPos = new Vector2();
+        lastScreenPos = new Vector2(-1,-1);
     }
     #endregion
 
