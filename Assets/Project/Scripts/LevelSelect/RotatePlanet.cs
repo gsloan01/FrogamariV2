@@ -14,6 +14,10 @@ public class RotatePlanet : MonoBehaviour
         InputManager.Instance.onDrag += ControlPlanetRotation;
         target = transform.rotation.eulerAngles;
     }
+    private void OnDisable()
+    {
+        if (InputManager.InstanceExists) InputManager.Instance.onDrag -= ControlPlanetRotation;
+    }
 
     void Update()
     {
