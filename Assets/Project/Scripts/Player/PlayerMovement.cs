@@ -35,7 +35,7 @@ public class PlayerMovement : SingletonComponent<PlayerMovement>
         Vector3 position = transform.position;
         Vector2 swipeDir = swipe.SwipeDirection;
 
-        position += new Vector3(swipeDir.x, 0, swipeDir.y) * jumpDistance;
+        position += new Vector3(swipeDir.x, 0, swipeDir.y) * jumpDistance * transform.localScale.x;
 
         meshAgent.SetDestination(position);
 
