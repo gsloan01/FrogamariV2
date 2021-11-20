@@ -369,6 +369,7 @@ GameObject:
   - component: {fileID: 2807932799477232535}
   - component: {fileID: 2807932799477232534}
   - component: {fileID: 2807932799477232537}
+  - component: {fileID: 1485102193}
   m_Layer: 0
   m_Name: FrogPlayer
   m_TagString: Untagged
@@ -440,6 +441,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.75
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!114 &1485102193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2807932799477232539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84668aa7cb3eccb499a5887301bc0128, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentMass: 10
 --- !u!1 &6462200831010950152
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,7 +512,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 5
+  m_Radius: 7
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!120 &2713634998611007272
 LineRenderer:
