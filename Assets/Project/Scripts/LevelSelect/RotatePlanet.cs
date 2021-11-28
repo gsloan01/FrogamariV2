@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RotatePlanet : MonoBehaviour
 {
+    public Animator frogAnimator;
+
     [SerializeField]
     private float rotationSpeed = 30f;
 
@@ -35,7 +37,7 @@ public class RotatePlanet : MonoBehaviour
         ////Normalized Vector2 (-1 to 1)
 
         transform.Rotate(new Vector3(vector.y, -vector.x, 0), vector.magnitude * rotationSpeed * Time.deltaTime, Space.World);
-        
+        frogAnimator?.Play("Walk");
         //target = new Vector3(-swipeDir.y * rotationSpeed, swipeDir.x * rotationSpeed, 0);
     }
 }

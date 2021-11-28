@@ -3130,7 +3130,7 @@ Transform:
   m_GameObject: {fileID: 4542940262111066047}
   m_LocalRotation: {x: -0.60876125, y: -0, z: -0, w: 0.7933535}
   m_LocalPosition: {x: 0, y: 0.8838829, z: -3.969069}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children:
   - {fileID: 1056103749255331064}
   m_Father: {fileID: 0}
@@ -4540,6 +4540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73048f952b50fc54a8e7b0e30716244b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  frogAnimator: {fileID: 1056103749262807836}
   rotationSpeed: 50
 --- !u!23 &8443921166626544976
 MeshRenderer:
