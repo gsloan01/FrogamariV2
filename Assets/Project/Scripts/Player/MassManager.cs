@@ -36,6 +36,7 @@ public class MassManager : SingletonComponent<MassManager>
         massUpdate?.Invoke(CurrentMass);
         massRatioUpdate?.Invoke(newMass);
 
-        //transform.localScale = new Vector3(newMass, newMass, newMass);
+        Mouth.Instance.line.startWidth += mass * scaleMod;
+        Mouth.Instance.line.endWidth += mass * scaleMod;
     }
 }
