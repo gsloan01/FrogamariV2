@@ -22,8 +22,13 @@ public class LickUI : MonoBehaviour
     private void Awake()
     {
         //Debug.Log($"LickUI for {consumable.name} created");
-        playerCamera = Camera.main;
     }
+
+    private void Start()
+    {
+        playerCamera = PlayerCamera.Instance.GetCurrentCamera();
+    }
+
     public void Open()
     {
         gameObject.SetActive(true);
