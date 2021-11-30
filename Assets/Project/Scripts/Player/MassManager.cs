@@ -9,6 +9,10 @@ public class MassManager : SingletonComponent<MassManager>
     private float baseMass;
     
     public float CurrentMass { get; set; }
+
+    public delegate void MassDelegate(float mass);
+    public static event MassDelegate massUpdate;
+    public static event MassDelegate massRatioUpdate;
     
 
     [SerializeField]
@@ -29,6 +33,8 @@ public class MassManager : SingletonComponent<MassManager>
         float newMass = (CurrentMass - baseMass) * scaleMod + baseScale;
 
         transform.DOScale(new Vector3(newMass, newMass, newMass), 0.5f);
+        massUpdate?.Invoke(CurrentMass);
+        massRatioUpdate?.Invoke(newMass);
 
         //transform.localScale = new Vector3(newMass, newMass, newMass);
     }
