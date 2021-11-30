@@ -30,6 +30,7 @@ public class MassManager : SingletonComponent<MassManager>
 
         transform.DOScale(new Vector3(newMass, newMass, newMass), 0.5f);
 
-        //transform.localScale = new Vector3(newMass, newMass, newMass);
+        Mouth.Instance.line.startWidth += mass * scaleMod;
+        Mouth.Instance.line.endWidth += mass * scaleMod;
     }
 }
