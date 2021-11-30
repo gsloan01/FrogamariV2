@@ -7,6 +7,7 @@ public class PlayerCamera : MonoBehaviour
 {
     [SerializeField]
     private Transform target;
+    private Camera unityCamera;
     private CinemachineBrain cineBrain;
     private CinemachineVirtualCamera cineCamera;
 

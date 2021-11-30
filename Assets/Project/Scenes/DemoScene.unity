@@ -1183,6 +1183,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 4380367587393993615, guid: 3e6299e113a8d074bb42b82369f66940,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380367587393993615, guid: 3e6299e113a8d074bb42b82369f66940,
+        type: 3}
+      propertyPath: field of view
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 4597265875800556607, guid: 3e6299e113a8d074bb42b82369f66940,
         type: 3}
       propertyPath: m_Follow
