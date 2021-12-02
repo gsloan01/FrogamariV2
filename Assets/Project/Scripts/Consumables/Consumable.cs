@@ -7,10 +7,6 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class Consumable : MonoBehaviour
 {
-    public delegate void OnStuck();
-    public OnStuck OnStuckCallback;
-
-
     public float mass = 1;
     [Range(0, 2)]public float massGainRatio = 0.75f;
     [Range(0, 2)] public float minGrabMultiplier = 0.75f;
@@ -21,10 +17,10 @@ public class Consumable : MonoBehaviour
     void Start()
     {
         interactable = GetComponent<Interactable>();
-        interactable.onInteractedCallback += FollowTongue;
+        interactable.onInteractedCallback += Interacted;
     }
 
-    void FollowTongue()
+    protected virtual void Interacted()
     {
         if (MassManager.Instance.CurrentMass >= mass * minGrabMultiplier)
         {
@@ -36,14 +32,19 @@ public class Consumable : MonoBehaviour
     {
         if (MassManager.Instance.CurrentMass >= mass * minGrabMultiplier)
         {
-            MassManager.Instance.ChangeMass(mass * massGainRatio);
+            MainEffect();
             OtherEffects();
         }
     }
 
+    public virtual void MainEffect()
+    {
+        MassManager.Instance.ChangeMass(mass * massGainRatio);
+    }
+
     public virtual void OtherEffects()
     {
-        Debug.Log("Other Consumable Effects");
+        //Put anything other than sizing in here
     }
 
     private void OnDestroy()
