@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6e0a9c9352d0f24296eee7d669703c7, type: 3}
+  m_Name: SansScheme
+  m_EditorClassIdentifier: 
+  schemeName: Funny Skeleton
+  main: {r: 0.8584906, g: 0.8584906, b: 0.8584906, a: 0}
+  secondary: {r: 0.082289055, g: 0.15777089, b: 0.6509434, a: 0}
+  eyeWhite: {r: 0, g: 0, b: 0, a: 0}
+  pupil: {r: 0, g: 3.9533494, b: 3.7256696, a: 0}

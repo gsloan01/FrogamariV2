@@ -8,10 +8,13 @@ public class CosmeticsManager : MonoBehaviour
 
     public Transform hatTransform;
 
+    Material mat;
     GameObject currentHat = null;
 
     private void Start()
     {
+        mat = GetComponentInChildren<SkinnedMeshRenderer>().material;
+        
         UpdateHat();
         UpdateColor();
     }
@@ -23,6 +26,9 @@ public class CosmeticsManager : MonoBehaviour
 
     public void UpdateColor()
     {
-        
+        mat.SetColor("_MainSkin", data.currentScheme.main);
+        mat.SetColor("_SecondarySkin", data.currentScheme.secondary);
+        mat.SetColor("_EyeWhites", data.currentScheme.eyeWhite);
+        mat.SetColor("_Pupil", data.currentScheme.pupil);
     }
 }

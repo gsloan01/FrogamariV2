@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6e0a9c9352d0f24296eee7d669703c7, type: 3}
+  m_Name: DefaultScheme
+  m_EditorClassIdentifier: 
+  schemeName: The Original
+  main: {r: 0.44520125, g: 0.5520116, b: 0.033104774, a: 0}
+  secondary: {r: 0.2874409, g: 0.37626222, b: 0.003676507, a: 0}
+  eyeWhite: {r: 0.9911022, g: 0.9911022, b: 0.98225087, a: 0}
+  pupil: {r: 0.026241222, g: 0.026241222, b: 0.042311423, a: 0}

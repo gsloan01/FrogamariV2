@@ -5,5 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "NewColorScheme", menuName = "Data/ColorScheme")]
 public class FrogColorScheme : ScriptableObject
 {
-    [SerializeField] Color main, secondary, eyeWhite, pupil;
+    public string schemeName;
+    [ColorUsage(true, true)]
+    public Color main, secondary, eyeWhite, pupil;
+    public Sprite icon;
 }

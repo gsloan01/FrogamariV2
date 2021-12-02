@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6e0a9c9352d0f24296eee7d669703c7, type: 3}
+  m_Name: DemonicScheme
+  m_EditorClassIdentifier: 
+  schemeName: Demonic
+  main: {r: 0.7924528, g: 0, b: 0, a: 0}
+  secondary: {r: 0.5471698, g: 0.06837489, b: 0.038198628, a: 0}
+  eyeWhite: {r: 6.0628657, g: 4.0894623, b: 0, a: 0}
+  pupil: {r: 1.39772, g: 1.3099052, b: 0, a: 0}
