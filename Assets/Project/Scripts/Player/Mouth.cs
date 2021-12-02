@@ -8,9 +8,9 @@ public class Mouth : SingletonComponent<Mouth>
 
     public Interactable target;
     public GameObject tongueObject { get; set; }
+    public LineRenderer line { get; set; }
 
     float timer = 0;
-    LineRenderer line;
 
     void Awake()
     {

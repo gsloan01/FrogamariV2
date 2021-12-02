@@ -370,6 +370,7 @@ GameObject:
   - component: {fileID: 2807932799477232534}
   - component: {fileID: 2807932799477232537}
   - component: {fileID: 1485102193}
+  - component: {fileID: 7872527907067438377}
   m_Layer: 0
   m_Name: FrogPlayer
   m_TagString: Untagged
@@ -453,7 +454,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84668aa7cb3eccb499a5887301bc0128, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentMass: 10
+  baseMass: 0
+  baseScale: 0
+  scaleMod: 0
+--- !u!114 &7872527907067438377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2807932799477232539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc312dc9b611d2642ac37a260b513a5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6462200831010950152
 GameObject:
   m_ObjectHideFlags: 0

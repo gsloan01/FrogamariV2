@@ -36,7 +36,7 @@ public class Consumable : MonoBehaviour
     {
         if (MassManager.Instance.CurrentMass >= mass * minGrabMultiplier)
         {
-            MassManager.Instance.GainMass(mass * massGainRatio);
+            MassManager.Instance.ChangeMass(mass * massGainRatio);
             OtherEffects();
         }
     }

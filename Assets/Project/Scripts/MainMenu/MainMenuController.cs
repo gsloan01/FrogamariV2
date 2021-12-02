@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,8 @@ public class MainMenuController : MonoBehaviour
     [SerializeField]Canvas Customize;
     [SerializeField]Canvas Shop;
     [SerializeField]Canvas Options;
+
+    [SerializeField]GameObject LootBox;
 
     [SerializeField]Color mainMenuBG;
     [SerializeField]Color customizeBG;
@@ -72,6 +75,27 @@ public class MainMenuController : MonoBehaviour
         Shop.gameObject.SetActive(true);
         target = shopBG;
         targetAngle = shopAngle;
+        SwooshFX?.Play();
+    }
+
+    public void OnOpenLootBox()
+    {
+        CloseAll();
+        LootBox.gameObject.SetActive(true);
+        LootBox.transform.DOMove(new Vector3(LootBox.transform.position.x - 915, LootBox.transform.position.y, LootBox.transform.position.z), 1f);
+
+        SwooshFX?.Play();
+    }
+
+    public void OnCloseLootBox()
+    {
+        LootBox.transform.DOMove(new Vector3(LootBox.transform.position.x + 915, LootBox.transform.position.y, LootBox.transform.position.z), 1f);
+
+        //if (LootBox.transform.DOMove(new Vector3(LootBox.transform.position.x + 915, LootBox.transform.position.y, LootBox.transform.position.z), 1f).IsComplete())
+        //    LootBox.gameObject.SetActive(false);
+
+        OnOpenMainMenu();
+
         SwooshFX?.Play();
     }
 
