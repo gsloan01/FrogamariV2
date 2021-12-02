@@ -7,6 +7,7 @@ public class Tongue : MonoBehaviour
     public float speed = 1;
     public float mouthRange = 0.5f;
     public bool lerpMovement = false;
+    public bool canMove = true;
 
     bool hitTarget = false;
 
@@ -19,11 +20,14 @@ public class Tongue : MonoBehaviour
         //Move back to the mouth
         else targetPosition = Mouth.Instance.transform.position;
 
-        Vector3 movement;
-        if (lerpMovement) movement = Vector3.Lerp(transform.position, targetPosition, speed * Time.deltaTime);
-        else movement = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
+        if (canMove)
+        {
+            Vector3 movement;
+            if (lerpMovement) movement = Vector3.Lerp(transform.position, targetPosition, speed * Time.deltaTime);
+            else movement = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
 
-        transform.position = movement;
+            transform.position = movement;
+        }
 
         //Check range to mouth
         bool withinRange = Vector3.Distance(transform.position, Mouth.Instance.transform.position) <= mouthRange;
