@@ -7,6 +7,7 @@ using UnityEngine;
 public class PlayerData : ScriptableObject
 {
     public List<CustomizationItemData> unlocked = new List<CustomizationItemData>();
+    public int coins;
     public List<FrogColorScheme> unlockedColorSchemes = new List<FrogColorScheme>();
     public CustomizationItemData hat = null;
     public FrogColorScheme currentScheme;
