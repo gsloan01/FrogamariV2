@@ -15,5 +15,5 @@ MonoBehaviour:
   name: Testing hat
   slot: 0
   cost: 33
-  item: {fileID: 902906018181320128, guid: 0885bd85eb15b9d42a99ce07d9b6b0bc, type: 3}
+  item: {fileID: 100000, guid: 06c4131835f65024586454416f6b1f66, type: 3}
   icon: {fileID: 21300000, guid: 7fb269afbeb0b584686123ff7b4eaee1, type: 3}
