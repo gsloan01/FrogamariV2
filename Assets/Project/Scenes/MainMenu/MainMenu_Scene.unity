@@ -1232,12 +1232,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 250136178}
-  m_LocalRotation: {x: -0.27032474, y: -0, z: 0.000000007450581, w: 0.9627692}
-  m_LocalPosition: {x: 0.000000019868216, y: 1.0699999, z: 0.12000009}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.27032474, y: -0, z: 0.000000022351745, w: 0.9627692}
+  m_LocalPosition: {x: 0, y: 0.00717, z: 0.00228}
+  m_LocalScale: {x: 0.009999999, y: 0.010000002, z: 0.010000002}
   m_Children: []
-  m_Father: {fileID: 2209194925443689967}
-  m_RootOrder: 2
+  m_Father: {fileID: 2209194925443689963}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -31.367, y: 0, z: 0}
 --- !u!1 &259652006
 GameObject:
@@ -2868,12 +2868,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 716139220}
-  m_LocalRotation: {x: -0.27032474, y: -0, z: 0.000000007450581, w: 0.9627692}
-  m_LocalPosition: {x: 0.000000019868216, y: 1.0699999, z: 0.12000009}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.27032474, y: -0, z: 0.000000022351745, w: 0.9627692}
+  m_LocalPosition: {x: 0, y: 0.00717, z: 0.00228}
+  m_LocalScale: {x: 0.009999999, y: 0.010000002, z: 0.010000002}
   m_Children: []
-  m_Father: {fileID: 2209194924133209576}
-  m_RootOrder: 2
+  m_Father: {fileID: 2209194924133209580}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -31.367, y: 0, z: 0}
 --- !u!1 &730203762
 GameObject:
@@ -5032,11 +5032,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1201298307}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: [{m_Target: {fileID: 624245307}, m_TargetAssemblyTypeName: 'CustomizationMenu,
-            Assembly-CSharp', m_MethodName: Swap, m_Mode: 5, m_Arguments: {m_ObjectArgument: {
-              fileID: 0}, m_ObjectArgumentAssemblyTypeName: 'UnityEngine.Object, UnityEngine',
-            m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: left, m_BoolArgument: 0},
-          m_CallState: 2}]
+      m_Calls:
+      - m_Target: {fileID: 624245307}
+        m_TargetAssemblyTypeName: CustomizationMenu, Assembly-CSharp
+        m_MethodName: Swap
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: left
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1201298307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7083,12 +7091,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1790994581}
-  m_LocalRotation: {x: -0.27032474, y: -0, z: 0.000000007450581, w: 0.9627692}
-  m_LocalPosition: {x: 0.000000019868216, y: 1.0699999, z: 0.12000009}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.27032474, y: -0, z: 0.000000022351745, w: 0.9627692}
+  m_LocalPosition: {x: 0, y: 0.00717, z: 0.00228}
+  m_LocalScale: {x: 0.009999999, y: 0.010000002, z: 0.010000002}
   m_Children: []
-  m_Father: {fileID: 2209194924217409725}
-  m_RootOrder: 2
+  m_Father: {fileID: 2209194924217409721}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -31.367, y: 0, z: 0}
 --- !u!1 &1874399672
 GameObject:
@@ -7623,11 +7631,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1992632149}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: [{m_Target: {fileID: 624245307}, m_TargetAssemblyTypeName: 'CustomizationMenu,
-            Assembly-CSharp', m_MethodName: Swap, m_Mode: 5, m_Arguments: {m_ObjectArgument: {
-              fileID: 0}, m_ObjectArgumentAssemblyTypeName: 'UnityEngine.Object, UnityEngine',
-            m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: right, m_BoolArgument: 0},
-          m_CallState: 2}]
+      m_Calls:
+      - m_Target: {fileID: 624245307}
+        m_TargetAssemblyTypeName: CustomizationMenu, Assembly-CSharp
+        m_MethodName: Swap
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: right
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1992632149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8278,7 +8294,6 @@ Transform:
   m_Children:
   - {fileID: 2209194924133209582}
   - {fileID: 2209194924133209570}
-  - {fileID: 716139221}
   m_Father: {fileID: 866706229}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 46.623, z: 0}
@@ -8306,7 +8321,8 @@ Transform:
   m_LocalRotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: -0, y: 0, z: 0.0017677238}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 716139221}
   m_Father: {fileID: 2209194924133209596}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8506,7 +8522,8 @@ Transform:
   m_LocalRotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: -0, y: 0, z: 0.0017677238}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1790994582}
   m_Father: {fileID: 2209194924217409705}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8537,7 +8554,6 @@ Transform:
   m_Children:
   - {fileID: 2209194924217409723}
   - {fileID: 2209194924217409719}
-  - {fileID: 1790994582}
   m_Father: {fileID: 568513910}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 14.89, y: 60.175, z: 16.766}
@@ -8905,7 +8921,8 @@ Transform:
   m_LocalRotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: -0, y: 0, z: 0.0017677238}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 250136179}
   m_Father: {fileID: 2209194925443689979}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8936,7 +8953,6 @@ Transform:
   m_Children:
   - {fileID: 2209194925443689961}
   - {fileID: 2209194925443689957}
-  - {fileID: 250136179}
   m_Father: {fileID: 602504730}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 15.38, z: 0}

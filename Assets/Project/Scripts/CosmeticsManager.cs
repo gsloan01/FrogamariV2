@@ -18,7 +18,7 @@ public class CosmeticsManager : MonoBehaviour
     public void UpdateHat()
     {
         if(currentHat != null) Destroy(currentHat);
-        currentHat = Instantiate(data.hat.item, hatTransform);
+        if(data.hat != null) currentHat = Instantiate(data.hat.item, hatTransform);
     }
 
     public void UpdateColor()

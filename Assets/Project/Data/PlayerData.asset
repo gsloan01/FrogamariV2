@@ -13,3 +13,6 @@ MonoBehaviour:
   m_Name: PlayerData
   m_EditorClassIdentifier: 
   unlocked: []
+  unlockedColorSchemes: []
+  hat: {fileID: 0}
+  currentScheme: {fileID: 0}

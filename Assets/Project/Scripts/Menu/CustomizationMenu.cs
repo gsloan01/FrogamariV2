@@ -42,9 +42,10 @@ public class CustomizationMenu : MonoBehaviour
             data.hat = (index == -1) ? null : data.unlocked[index];
             if (index != -1) Debug.Log($"current hat is {data.unlocked[index].name}");
             else Debug.Log("NO HAT MOMENT");
-            foreach(var v in cosmeticManagers) v.UpdateHat();
+            
         }
         else Debug.Log("No hats owned");
+        foreach (var v in cosmeticManagers) v.UpdateHat();
     }
 
 
