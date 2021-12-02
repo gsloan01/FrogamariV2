@@ -7,4 +7,5 @@ using UnityEngine;
 public class PlayerData : ScriptableObject
 {
     public List<CustomizationItemData> unlocked = new List<CustomizationItemData>();
+    public CustomizationItemData hat = null;
 }
