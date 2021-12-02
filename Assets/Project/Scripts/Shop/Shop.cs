@@ -9,6 +9,7 @@ public class Shop : MonoBehaviour
     [SerializeField] ShopItemUI itemUI;
     [SerializeField] GameObject shopList;
     [SerializeField] float delayBetween;
+    [SerializeField] PlayerData player;
 
     private AudioSource audioSource;
 
@@ -21,8 +22,17 @@ public class Shop : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
     }
+    private void Start()
+    {
+
+
+    }
     private void OnEnable()
     {
+        for (int i = 0; i < player.unlocked.Count; i++)
+        {
+            items.Remove(player.unlocked[i]);
+        }
         StartCoroutine(OpenShop());
     }
     private void OnDisable()
@@ -59,6 +69,8 @@ public class Shop : MonoBehaviour
     public void RemoveShopItem(ShopItemUI ui)
     {
         audioSource?.Play();
+        player.unlocked.Add(ui.data);
+        items.Remove(ui.data);
         created.Remove(ui);
     }
 
