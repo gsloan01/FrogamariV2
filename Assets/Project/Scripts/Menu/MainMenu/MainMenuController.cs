@@ -89,7 +89,8 @@ public class MainMenuController : MonoBehaviour
 
     public void OnCloseLootBox()
     {
-        LootBox.transform.DOMove(new Vector3(LootBox.transform.position.x + 915, LootBox.transform.position.y, LootBox.transform.position.z), 1f);
+        LootBox.transform.localPosition = new Vector3(1500, 0, 0);
+        LootBox.gameObject.SetActive(false);
 
         //if (LootBox.transform.DOMove(new Vector3(LootBox.transform.position.x + 915, LootBox.transform.position.y, LootBox.transform.position.z), 1f).IsComplete())
         //    LootBox.gameObject.SetActive(false);

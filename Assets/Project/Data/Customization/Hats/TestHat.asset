@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a0f107bbf7d1c7e4abbd047e5bc77225, type: 3}
-  m_Name: TestHat 1
+  m_Name: TestHat
   m_EditorClassIdentifier: 
-  name: Testing hat 2
+  name: Testing hat
   slot: 0
-  cost: 45
-  item: {fileID: 902906018181320128, guid: 0885bd85eb15b9d42a99ce07d9b6b0bc, type: 3}
-  icon: {fileID: 21300000, guid: 62f8e1824b14a60449e7914d82d3edf5, type: 3}
+  cost: 33
+  item: {fileID: 100000, guid: 06c4131835f65024586454416f6b1f66, type: 3}
+  icon: {fileID: 21300000, guid: 7fb269afbeb0b584686123ff7b4eaee1, type: 3}
