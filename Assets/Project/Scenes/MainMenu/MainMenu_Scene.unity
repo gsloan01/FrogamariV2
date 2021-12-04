@@ -1905,7 +1905,6 @@ MonoBehaviour:
   playerData: {fileID: 11400000, guid: 3385e144b5ca2884eacd7f38451d5033, type: 2}
   shop: {fileID: 1785803975}
   valueTable: 4b00000019000000
-  total: 0
   randomNumber: 0
 --- !u!1 &380208613
 GameObject:
@@ -4282,13 +4281,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0, y: 0.8660254, z: -0, w: -0.5}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 240, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
