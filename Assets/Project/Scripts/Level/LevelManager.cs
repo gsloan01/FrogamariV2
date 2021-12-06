@@ -9,6 +9,8 @@ public class LevelManager : SingletonComponent<LevelManager>
     [SerializeField] private float levelTime;
     [SerializeField] private List<MassEvent> events;
 
+    public PlayerData playerData;
+
     private void Start()
     {
         MassManager.massUpdate += OnMassUpdate;
