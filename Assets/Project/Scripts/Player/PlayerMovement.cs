@@ -57,9 +57,10 @@ public class PlayerMovement : SingletonComponent<PlayerMovement>
         if (effectTimer > 0)
         {
             effectTimer -= Time.deltaTime;
-        } else
+        } else if (moveMultiplier == -1)
         {
             moveMultiplier = 1;
+            PlayerEffects.Instance.RemoveEffect();
         }
     }
 
@@ -67,5 +68,6 @@ public class PlayerMovement : SingletonComponent<PlayerMovement>
     {
         moveMultiplier = -1;
         effectTimer = time;
+        PlayerEffects.Instance.SetEffect("Confusion");
     }
 }
