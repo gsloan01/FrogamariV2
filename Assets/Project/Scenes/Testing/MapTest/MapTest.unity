@@ -65742,6 +65742,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: FrogPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 7872527907067438377, guid: d13d367d8063a9b41ac39fb3ce81406c,
+        type: 3}
+      propertyPath: visuals.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872527907067438377, guid: d13d367d8063a9b41ac39fb3ce81406c,
+        type: 3}
+      propertyPath: visuals.Array.data[0].name
+      value: Stun
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872527907067438377, guid: d13d367d8063a9b41ac39fb3ce81406c,
+        type: 3}
+      propertyPath: visuals.Array.data[1].name
+      value: Confusion
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872527907067438377, guid: d13d367d8063a9b41ac39fb3ce81406c,
+        type: 3}
+      propertyPath: visuals.Array.data[0].effectPrefab
+      value: 
+      objectReference: {fileID: 4335571543887988128, guid: 64c943b2d02c58e4b9c533ef2e359b18,
+        type: 3}
+    - target: {fileID: 7872527907067438377, guid: d13d367d8063a9b41ac39fb3ce81406c,
+        type: 3}
+      propertyPath: visuals.Array.data[1].effectPrefab
+      value: 
+      objectReference: {fileID: 6079224272699662698, guid: c79079f4cbcf277488c4ab196c5db7c1,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d13d367d8063a9b41ac39fb3ce81406c, type: 3}
 --- !u!1 &1526115190 stripped
