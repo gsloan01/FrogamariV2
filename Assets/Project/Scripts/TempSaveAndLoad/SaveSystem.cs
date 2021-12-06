@@ -10,12 +10,14 @@ public static class SaveSystem
         string filePath = Application.persistentDataPath + "frog.pd";
         FileStream fileStream = new FileStream(filePath, FileMode.Create);
 
-        binaryFormatter.Serialize(fileStream, playerData);
+        PlayerDataSAL playerDataSAL = new PlayerDataSAL(playerData);
+
+        binaryFormatter.Serialize(fileStream, playerDataSAL);
 
         fileStream.Close();
     }
 
-    public static PlayerData LoadPlayerData()
+    public static PlayerDataSAL LoadPlayerData()
     {
         string filePath = Application.persistentDataPath + "frog.pd";
         
@@ -24,10 +26,10 @@ public static class SaveSystem
             BinaryFormatter binaryFormatter = new BinaryFormatter();
             FileStream fileStream = new FileStream(filePath, FileMode.Open);
 
-            PlayerData playerData = binaryFormatter.Deserialize(fileStream) as PlayerData;
+            PlayerDataSAL playerDataSAL = binaryFormatter.Deserialize(fileStream) as PlayerDataSAL;
             fileStream.Close();
 
-            return playerData;
+            return playerDataSAL;
         }
         else
         {
