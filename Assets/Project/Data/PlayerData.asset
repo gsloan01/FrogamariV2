@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 242444236e7d4324cacbb6470cad3030, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
-  unlocked: [{fileID: 11400000, guid: 0586befbae4ef944aa84387711ee9787, type: 2},
-    {fileID: 11400000, guid: 671334103f0025e45b8b4bf54b8e6633, type: 2}]
-  unlockedColorSchemes: [{fileID: 11400000, guid: 2bc1c5c9d9b7d8c4bbc1b0b75abcbc95,
-      type: 2}, {fileID: 11400000, guid: 313ea504bfeb5c9419728da02de75ef4, type: 2},
-    {fileID: 11400000, guid: d89bb5f37bafd444e8e596563c361626, type: 2}, {fileID: 11400000,
-      guid: 6600d6cb3ccf0b145a354a1c03b73adf, type: 2}]
-  hat: {fileID: 11400000, guid: 0586befbae4ef944aa84387711ee9787, type: 2}
-  currentScheme: {fileID: 11400000, guid: 2bc1c5c9d9b7d8c4bbc1b0b75abcbc95, type: 2}
+  unlocked: []
   coins: 0
+  unlockedColorSchemes:
+  - {fileID: 11400000, guid: 2bc1c5c9d9b7d8c4bbc1b0b75abcbc95, type: 2}
+  - {fileID: 11400000, guid: 313ea504bfeb5c9419728da02de75ef4, type: 2}
+  - {fileID: 11400000, guid: d89bb5f37bafd444e8e596563c361626, type: 2}
+  - {fileID: 11400000, guid: 6600d6cb3ccf0b145a354a1c03b73adf, type: 2}
+  - {fileID: 11400000, guid: 517c20347abeb464f96c1bb9356192bb, type: 2}
+  hat: {fileID: 0}
+  currentScheme: {fileID: 11400000, guid: 2bc1c5c9d9b7d8c4bbc1b0b75abcbc95, type: 2}

@@ -16,4 +16,4 @@ MonoBehaviour:
   slot: 0
   cost: 45
   item: {fileID: 100000, guid: a0dfaf0497ab5334a99165f16b697e6e, type: 3}
-  icon: {fileID: 21300000, guid: 62f8e1824b14a60449e7914d82d3edf5, type: 3}
+  icon: {fileID: 21300000, guid: 0f73773c82a398f43b05616d6dbb57ef, type: 3}

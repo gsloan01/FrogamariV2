@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6e0a9c9352d0f24296eee7d669703c7, type: 3}
+  m_Name: FleshyFrog
+  m_EditorClassIdentifier: 
+  schemeName: Eww.. gross..
+  main: {r: 1, g: 0.54359907, b: 0.3150943, a: 0}
+  secondary: {r: 1, g: 0.5457247, b: 0.31398875, a: 0}
+  eyeWhite: {r: 0.9339623, g: 0.9339623, b: 0.9339623, a: 0}
+  pupil: {r: 1, g: 0.107547104, b: 0.107547104, a: 0}
+  icon: {fileID: 21300000, guid: 62f8e1824b14a60449e7914d82d3edf5, type: 3}
