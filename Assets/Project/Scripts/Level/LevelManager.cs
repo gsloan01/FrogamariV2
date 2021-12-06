@@ -52,6 +52,7 @@ public class LevelManager : SingletonComponent<LevelManager>
     public void Win()
     {
         DisablePlayer();
+        playerData.coins += 100;
         PlayerCamera.Instance.OnWin();
     }
 
