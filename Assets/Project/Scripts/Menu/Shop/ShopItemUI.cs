@@ -11,7 +11,7 @@ public class ShopItemUI : MonoBehaviour
     public CustomizationItemData data;
     public Image icon;
     public TMP_Text costBox;
-
+    public PlayerData player;
     public UnityEvent<ShopItemUI> OnPurchase;
 
 
@@ -31,9 +31,15 @@ public class ShopItemUI : MonoBehaviour
 
     public void PurchaseItem()
     {
-        
-        OnPurchase.Invoke(this);
-        transform.DOScale(0, .25f);
-        Destroy(gameObject, .25f);
+        if(player.coins >= data.cost)
+        {
+            player.coins -= data.cost;
+
+            CoinDisplay.Instance.UpdateCoins();
+            OnPurchase.Invoke(this);
+            transform.DOScale(0, .25f);
+            Destroy(gameObject, .25f);
+        }
+
     }
 }

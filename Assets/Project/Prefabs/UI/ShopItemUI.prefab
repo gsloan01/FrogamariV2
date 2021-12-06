@@ -91,8 +91,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e87f2894ec27f042809b71ec3579b49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data: {fileID: 0}
   icon: {fileID: 2101870485003124807}
   costBox: {fileID: 2101870483987123788}
+  player: {fileID: 11400000, guid: 3385e144b5ca2884eacd7f38451d5033, type: 2}
   OnPurchase:
     m_PersistentCalls:
       m_Calls: []

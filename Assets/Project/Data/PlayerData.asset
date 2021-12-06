@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PlayerData
   m_EditorClassIdentifier: 
   unlocked: []
-  coins: 0
+  coins: 45
   unlockedColorSchemes:
   - {fileID: 11400000, guid: 2bc1c5c9d9b7d8c4bbc1b0b75abcbc95, type: 2}
   - {fileID: 11400000, guid: 313ea504bfeb5c9419728da02de75ef4, type: 2}
@@ -22,4 +22,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 517c20347abeb464f96c1bb9356192bb, type: 2}
   - {fileID: 11400000, guid: df308414ec6d53c4980d9da13fc1e5b4, type: 2}
   hat: {fileID: 0}
-  currentScheme: {fileID: 11400000, guid: d89bb5f37bafd444e8e596563c361626, type: 2}
+  currentScheme: {fileID: 11400000, guid: 2bc1c5c9d9b7d8c4bbc1b0b75abcbc95, type: 2}
