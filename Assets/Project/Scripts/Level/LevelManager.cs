@@ -15,6 +15,8 @@ public class LevelManager : SingletonComponent<LevelManager>
     [SerializeField] private Animator loseTextAnimator;
     [SerializeField] SceneController sceneController;
 
+    public PlayerData playerData;
+
     [SerializeField] private float targetMass;
     private bool gameEnd = false;
     
@@ -50,6 +52,7 @@ public class LevelManager : SingletonComponent<LevelManager>
     public void Win()
     {
         DisablePlayer();
+        playerData.coins += 100;
         PlayerCamera.Instance.OnWin();
     }
 
