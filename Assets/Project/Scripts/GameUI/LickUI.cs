@@ -41,6 +41,7 @@ public class LickUI : MonoBehaviour
 
     public void OnClick()
     {
+        Debug.Log("Click");
         Mouth.Instance.target = consumable;
         Mouth.Instance.CreateTongue();
     }
