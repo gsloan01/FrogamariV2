@@ -27,6 +27,7 @@ public class LickUI : MonoBehaviour
     private void Start()
     {
         playerCamera = PlayerCamera.Instance.GetCurrentCamera();
+        
     }
 
     public void Open()

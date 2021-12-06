@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0f107bbf7d1c7e4abbd047e5bc77225, type: 3}
+  m_Name: Crown
+  m_EditorClassIdentifier: 
+  name: Crown
+  slot: 0
+  cost: 25
+  item: {fileID: 100000, guid: 598a1f45fefa08846b93be35e98f166e, type: 3}
+  icon: {fileID: 21300000, guid: a3be2cf5fce262d43a90461e8c2a1e64, type: 3}

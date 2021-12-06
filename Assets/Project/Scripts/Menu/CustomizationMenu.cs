@@ -18,7 +18,7 @@ public class CustomizationMenu : MonoBehaviour
 
     public void SwapHat(string direction)
     {
-        if(data.unlocked.Count > 0)
+        if(data.unlocked.Count > 0 || data.unlocked == null)
         {
             if(direction.ToLower().Equals("left"))
             {
@@ -39,11 +39,11 @@ public class CustomizationMenu : MonoBehaviour
             }
             else
             {
-                Debug.Log("You cant fucking spell idiot");
+                Debug.Log("You cant spell idiot");
             }
-            data.hat = (index == -1) ? null : data.unlocked[index];
-            if (index != -1) Debug.Log($"current hat is {data.unlocked[index].name}");
-            else Debug.Log("NO HAT MOMENT");
+            Debug.Log("index : " + index.ToString());
+            data.hat = (index > data.unlocked.Count || index <= -1) ? null : data.unlocked[index];
+            
             
         }
         else Debug.Log("No hats owned");
