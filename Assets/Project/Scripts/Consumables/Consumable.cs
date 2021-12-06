@@ -30,7 +30,7 @@ public class Consumable : MonoBehaviour
 
     public void TryEat()
     {
-        if (MassManager.Instance.CurrentMass >= mass * minGrabMultiplier)
+        if (MassManager.Instance.CurrentMass >= mass * minEatMultiplier)
         {
             MainEffect();
             OtherEffects();

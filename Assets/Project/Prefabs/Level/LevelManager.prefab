@@ -282,10 +282,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 716f7a5349bbe854f8dc988fee60429d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelTime: 60
+  levelTime: 120
   events: []
   loseTextAnimator: {fileID: 1500662349752544925}
-  targetMass: 15
+  sceneController: {fileID: 0}
+  playerData: {fileID: 11400000, guid: 3385e144b5ca2884eacd7f38451d5033, type: 2}
+  targetMass: 10.5
 --- !u!223 &1500662350320357540
 Canvas:
   m_ObjectHideFlags: 0
