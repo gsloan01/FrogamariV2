@@ -51,8 +51,19 @@ public class LickUIManager : SingletonComponent<LickUIManager>
     {
         //Find the gameObjects ui and close it
         lickUIs.Where(x => x.consumable == thisObject).First().Close();
-        
     }
+
+    public void DisableManager()
+    {
+        for (int i = 0; i < lickUIs.Count; i++)
+        {
+            Destroy(lickUIs[i].gameObject);
+        }
+        lickUIs.Clear();
+        enabled = false;
+    }
+
+
     public void Clear()
     {
         lickUIs.ForEach(x => Destroy(x));

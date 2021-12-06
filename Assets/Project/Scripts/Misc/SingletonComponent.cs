@@ -29,6 +29,12 @@ public class SingletonComponent<T> : MonoBehaviour where T : Component
         } 
     }
 
+    public void DestroyInstance(bool objectDestroy = true)
+    {
+        instance = null;
+        if (objectDestroy) Destroy(gameObject);
+    }
+
     // Start is called before the first frame update
     public virtual void Awake()
     {
