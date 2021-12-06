@@ -11,7 +11,7 @@ public class DoorInteractable : Consumable
 
     protected override void Interacted()
     {
-        if (MassManager.Instance.CurrentMass <= mass * minGrabMultiplier)
+        if (MassManager.Instance.CurrentMass >= mass * minGrabMultiplier && MassManager.Instance.CurrentMass <= mass * minEatMultiplier)
         {
             Quaternion rotation = Quaternion.AngleAxis(rotateAmount, rotatePoint.transform.up);
             rotatePoint.DORotateQuaternion(rotation, rotateSpeed);

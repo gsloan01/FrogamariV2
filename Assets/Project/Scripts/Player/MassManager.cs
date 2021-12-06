@@ -36,7 +36,7 @@ public class MassManager : SingletonComponent<MassManager>
         massUpdate?.Invoke(CurrentMass);
         massRatioUpdate?.Invoke(newMass);
 
-        Mouth.Instance.line.startWidth += mass * 0.5f * scaleMod;
-        Mouth.Instance.line.endWidth += mass * 0.5f * scaleMod;
+        Mouth.Instance.line.startWidth += (mass * 0.5f) * scaleMod;
+        Mouth.Instance.line.endWidth += (mass * 0.5f) * scaleMod;
     }
 }
