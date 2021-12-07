@@ -90,7 +90,7 @@ public class PlayerCamera : SingletonComponent<PlayerCamera>
         //Have frog jump very high into the sky, and  have transition play
         PlayerMovement.Instance.gameObject.transform.DOBlendableLocalMoveBy(new Vector3(0, 200, 0), 7);
 
-        LevelManager.Instance.LoadScene("LevelSelect", 3.5f);
+        LevelManager.Instance.LoadScene("MainMenu_Scene", 3.5f);
         
         
     }

@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1508501103
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1508501104}
+  m_Layer: 0
+  m_Name: Effects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1508501104
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508501103}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.191, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2807932799477232536}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1680973903597724904
 GameObject:
   m_ObjectHideFlags: 0
@@ -64,7 +94,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1680973903597631688}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -3.0562105, y: -31.519058, z: 108.54436}
 --- !u!1 &1680973903597724914
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,7 +124,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1680973903597631688}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -15.82576, y: 4.5558796, z: 55.760593}
 --- !u!1 &1680973903597724916
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,7 +154,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1680973903597631688}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -30.057617, y: 17.898643, z: 98.54774}
 --- !u!1 &1680973903597724918
 GameObject:
   m_ObjectHideFlags: 0
@@ -185,7 +215,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1680973903597631688}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -10.814277, y: -33.43827, z: -80.92697}
 --- !u!1 &1680973903597724922
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,7 +386,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1680973903597631688}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.000015258789, y: -90, z: 130.3476}
 --- !u!1 &2807932799477232539
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,6 +421,7 @@ Transform:
   m_Children:
   - {fileID: 1680973903597631708}
   - {fileID: 3397491156032224855}
+  - {fileID: 1508501104}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -428,6 +459,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbee2514e3306d948adfd96bb0c515d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveMultiplier: 1
+  effectTimer: 0
   jumpDistance: 3
 --- !u!135 &2807932799477232537
 SphereCollider:
@@ -454,9 +487,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84668aa7cb3eccb499a5887301bc0128, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseMass: 0
-  baseScale: 0
-  scaleMod: 0
+  baseMass: 10
+  baseScale: 1
+  scaleMod: 0.15
 --- !u!114 &7872527907067438377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -469,6 +502,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc312dc9b611d2642ac37a260b513a5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  visuals:
+  - name: Stun
+    effectPrefab: {fileID: 4335571543887988128, guid: 64c943b2d02c58e4b9c533ef2e359b18,
+      type: 3}
+  - name: Confusion
+    effectPrefab: {fileID: 6079224272699662698, guid: c79079f4cbcf277488c4ab196c5db7c1,
+      type: 3}
+  effectPosition: {fileID: 1508501104}
 --- !u!1 &6462200831010950152
 GameObject:
   m_ObjectHideFlags: 0

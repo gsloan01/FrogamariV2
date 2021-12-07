@@ -33,14 +33,15 @@ public class Select : MonoBehaviour
         {
             selectLevelUpCanvas.SetActive(true);
             //selectLevelUpCanvas.transform.DOMove(new Vector3(selectLevelUpCanvas.transform.position.x, selectLevelUpCanvas.transform.position.y + 0.25f, selectLevelUpCanvas.transform.position.z), 2f).SetLoops(-1, LoopType.Yoyo);
-            selectLevelUpCanvas.transform.DOMove(new Vector3(selectLevelUpCanvas.transform.position.x - 300, selectLevelUpCanvas.transform.position.y, selectLevelUpCanvas.transform.position.z), 1.5f);
+            selectLevelUpCanvas.transform.DOMove(new Vector3(selectLevelUpCanvas.transform.position.x - 750, selectLevelUpCanvas.transform.position.y, selectLevelUpCanvas.transform.position.z), 1.5f);
             //Debug.Log("Entered");
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        selectLevelUpCanvas.transform.DOMove(new Vector3(selectLevelUpCanvas.transform.position.x + 300, selectLevelUpCanvas.transform.position.y, selectLevelUpCanvas.transform.position.z), 1.5f);
+        selectLevelUpCanvas.SetActive(false);
+        //selectLevelUpCanvas.transform.DOMove(new Vector3(selectLevelUpCanvas.transform.position.x + 750, selectLevelUpCanvas.transform.position.y, selectLevelUpCanvas.transform.position.z), 1.5f);
 
         if (selectLevelUpCanvas.transform.position.x >= selectLevelUpCanvas.transform.position.x + 300)
             selectLevelUpCanvas.SetActive(false);

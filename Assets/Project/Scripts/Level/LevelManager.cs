@@ -45,7 +45,7 @@ public class LevelManager : SingletonComponent<LevelManager>
     {
         DisablePlayer();
         loseTextAnimator.enabled = true;
-        LoadScene("LevelSelect", 7f);
+        LoadScene("MainMenu_Scene", 7f);
     }
     
 
